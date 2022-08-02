@@ -41,8 +41,14 @@ const characters = require('./swapi');
  *
  */
 
-function listAllCharacters() {}
+function listAllCharacters(char) {
+  if (!char.length) 
+  throw "Error: no charaters available"
 
+charList = char.map((c) => c.name)
+return charList
+
+}
 //UNCOMMENT THE LINES ONE AT A TIME BELOW TO TEST YOUR SOLUTION MANUALLY, THEN COMMENT BACK IN
 // console.log(listAllCharacters([]));
 // console.log(listAllCharacters(characters));
@@ -63,6 +69,7 @@ function listAllCharacters() {}
 
 function averageHeightOfAllCharacters() {}
 
+console.log(listAllCharacters(characters))
 //UNCOMMENT THE LINES ONE AT A TIME BELOW TO TEST YOUR SOLUTION MANUALLY, THEN COMMENT BACK IN
 //console.log(averageHeightOfAllCharacters(characters))
 
